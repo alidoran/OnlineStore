@@ -42,6 +42,6 @@ public class ASyncMainBanner extends AsyncTask {
 
 
 
-        return null;
+        //return null;
     }
 }
