@@ -1,0 +1,110 @@
+[1mdiff --git a/app/src/main/java/alidoran/ir/OnlineStore/ASyncLike.java b/app/src/main/java/alidoran/ir/OnlineStore/ASyncLike.java[m
+[1mindex 85377a1..6fb8108 100644[m
+[1m--- a/app/src/main/java/alidoran/ir/OnlineStore/ASyncLike.java[m
+[1m+++ b/app/src/main/java/alidoran/ir/OnlineStore/ASyncLike.java[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-//package alidoran.ir.OnlineStore;[m
+[32m+[m[32mpackage alidoran.ir.OnlineStore;//package alidoran.ir.OnlineStore;[m
+ //[m
+ //import android.os.AsyncTask;[m
+ //import java.io.BufferedReader;[m
+[36m@@ -6,48 +6,55 @@[m
+ //import java.io.OutputStreamWriter;[m
+ //import java.net.URL;[m
+ //import java.net.URLConnection;[m
+[31m-//import java.net.URLEncoder;[m
+[31m-//[m
+[31m-//public class ASyncLike extends AsyncTask {[m
+[31m-//[m
+[31m-//    public String link = "";[m
+[31m-//    public String user_id="";[m
+[31m-//[m
+[31m-//    public ASyncLike ( String link , String user_id ) {[m
+[31m-//        this.link = link;[m
+[31m-//        this.user_id=user_id;[m
+[31m-//    }[m
+[31m-//[m
+[31m-//[m
+[31m-//    @Override[m
+[31m-//    protected Object doInBackground ( Object[] objects ) {[m
+[31m-//        try {[m
+[31m-//            //user & pass convert to URL[m
+[31m-//            String data= URLEncoder.encode("userid","utf8")+"="+URLEncoder.encode ( user_id , "utf8"  );[m
+[31m-//[m
+[31m-//            //connect to server[m
+[31m-//            URL url = new URL ( link );[m
+[31m-//            URLConnection connection = url.openConnection ( );[m
+[31m-//[m
+[31m-//            //send to server[m
+[31m-//            connection.setDoOutput ( true );[m
+[31m-//            OutputStreamWriter streamWriter =new OutputStreamWriter ( connection.getOutputStream () );[m
+[31m-//            streamWriter.write ( data );[m
+[31m-//            streamWriter.flush ();[m
+[31m-//[m
+[31m-//            //read data[m
+[31m-//            BufferedReader reader = new BufferedReader ( new InputStreamReader ( connection.getInputStream ( ) ) );[m
+[31m-//            StringBuilder builder = new StringBuilder ( );[m
+[31m-//[m
+[31m-//            String line = null;[m
+[31m-//[m
+[31m-//            while ((line = reader.readLine ( )) != null) {[m
+[31m-//                builder.append ( line );[m
+[31m-//            }[m
+[32m+[m[32mimport android.os.AsyncTask;[m
+[32m+[m
+[32m+[m[32mimport java.io.BufferedReader;[m
+[32m+[m[32mimport java.io.InputStreamReader;[m
+[32m+[m[32mimport java.io.OutputStreamWriter;[m
+[32m+[m[32mimport java.net.URL;[m
+[32m+[m[32mimport java.net.URLConnection;[m
+[32m+[m[32mimport java.net.URLEncoder;[m
+[32m+[m
+[32m+[m[32mpublic class ASyncLike extends AsyncTask {[m
+[32m+[m
+[32m+[m[32m    public String link = "";[m
+[32m+[m[32m    public String user_id="";[m
+[32m+[m
+[32m+[m[32m    public ASyncLike ( String link , String user_id ) {[m
+[32m+[m[32m        this.link = link;[m
+[32m+[m[32m        this.user_id=user_id;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected Object doInBackground ( Object[] objects ) {[m
+[32m+[m[32m        try {[m
+[32m+[m[32m            //user & pass convert to URL[m
+[32m+[m[32m            String data= URLEncoder.encode("userid","utf8")+"="+URLEncoder.encode ( user_id , "utf8"  );[m
+[32m+[m
+[32m+[m[32m            //connect to server[m
+[32m+[m[32m            URL url = new URL ( link );[m
+[32m+[m[32m            URLConnection connection = url.openConnection ( );[m
+[32m+[m
+[32m+[m[32m            //send to server[m
+[32m+[m[32m            connection.setDoOutput ( true );[m
+[32m+[m[32m            OutputStreamWriter streamWriter =new OutputStreamWriter ( connection.getOutputStream () );[m
+[32m+[m[32m            streamWriter.write ( );[m
+[32m+[m[32m            streamWriter.flush ();[m
+[32m+[m
+[32m+[m[32m            //read data[m
+[32m+[m[32m            BufferedReader reader = new BufferedReader ( new InputStreamReader ( connection.getInputStream ( ) ) );[m
+[32m+[m[32m            StringBuilder builder = new StringBuilder ( );[m
+[32m+[m
+[32m+[m[32m            String line = null;[m
+[32m+[m
+[32m+[m[32m            while ((line = reader.readLine ( )) != null) {[m
+[32m+[m[32m                builder.append ( line );[m
+[32m+[m[32m            }[m
+ //            Comment.test = builder.toString ( );[m
+[31m-//[m
+[31m-//        } catch (Exception error) {[m
+[31m-//        }[m
+[31m-//        return "";[m
+[31m-//    }[m
+[31m-//}[m
+[32m+[m
+[32m+[m[32m        } catch (Exception error) {[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return "";[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
