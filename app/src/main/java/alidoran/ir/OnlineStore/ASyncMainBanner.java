@@ -39,9 +39,6 @@ public class ASyncMainBanner extends AsyncTask {
         } catch (IOException e) {
             e.printStackTrace ( );
         }
-
-
-
-        //return null;
+        return null;
     }
 }

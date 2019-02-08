@@ -1,10 +1,10 @@
 package alidoran.ir.OnlineStore;
 
-public class ProductListitem {
+public class RecycleProductListItem {
     public String title;
     public int img;
 
-    public ProductListitem ( int img, String title){
+    public RecycleProductListItem ( int img, String title){
         this.img=img;
         this.title=title;
     }

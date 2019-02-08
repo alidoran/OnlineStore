@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -136,11 +135,11 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     private void product_navigation ( ) {
         ListView listView_product = findViewById ( R.id.listview_product );
-        ArrayList <ProductListitem> items = new ArrayList <> ( );
-        items.add ( new ProductListitem ( R.mipmap.offer , "پر تخفیف ترین ها" ) );
-        items.add ( new ProductListitem ( R.mipmap.bestsell , "پر فروش ترین ها" ) );
-        items.add ( new ProductListitem ( R.mipmap.bestvisit , "پر بازدید ترین ها" ) );
-        items.add ( new ProductListitem ( R.mipmap.pnew , "جدیدترین ها" ) );
+        ArrayList <RecycleProductListItem> items = new ArrayList <> ( );
+        items.add ( new RecycleProductListItem ( R.mipmap.offer , "پر تخفیف ترین ها" ) );
+        items.add ( new RecycleProductListItem ( R.mipmap.bestsell , "پر فروش ترین ها" ) );
+        items.add ( new RecycleProductListItem ( R.mipmap.bestvisit , "پر بازدید ترین ها" ) );
+        items.add ( new RecycleProductListItem ( R.mipmap.pnew , "جدیدترین ها" ) );
         listView_product.setAdapter ( new ProductAdapter ( MainActivity.this , R.layout.listview_product , items ) );
     }
 
@@ -544,7 +543,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             @Override
             public void onClick ( View v ) {
 
-                ListProductActivity.data="";
+                ListProductActivityRecycle.data="";
                 new ASyncRecycle ( "http://www.alidoran.ir/list_product_recycle.php" ).execute (  );
 
                 final Timer timer = new Timer ( );
@@ -554,8 +553,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                         runOnUiThread ( new Runnable ( ) {
                             @Override
                             public void run ( ) {
-                                if (!ListProductActivity.data.equals ( "" )) {
-                                    Intent intent = new Intent ( MainActivity.this , ListProductActivity.class );
+                                if (!ListProductActivityRecycle.data.equals ( "" )) {
+                                    Intent intent = new Intent ( MainActivity.this , ListProductActivityRecycle.class );
                                     startActivity ( intent );
                                     timer.cancel ( );
                                     //finish ( );

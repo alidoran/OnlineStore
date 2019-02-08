@@ -37,7 +37,7 @@
         <activity android:name=".Specification" />
         <activity android:name=".ActivityComment" />
         <activity android:name=".CommentActivity" />
-        <activity android:name=".ListProductActivity"></activity>
+        <activity android:name=".ListProductActivityRecycle"></activity>
     </application>
 
 </manifest>

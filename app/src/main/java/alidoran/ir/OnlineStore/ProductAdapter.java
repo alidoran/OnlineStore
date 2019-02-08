@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class ProductAdapter extends ArrayAdapter {
     public int recuorceid;
     public Activity context;
-    public ArrayList<ProductListitem> object;
+    public ArrayList<RecycleProductListItem> object;
 
 
     public ProductAdapter ( @NonNull Activity context , int resource , ArrayList objects ) {
@@ -36,7 +36,7 @@ public class ProductAdapter extends ArrayAdapter {
         ImageView img=view.findViewById ( R.id.img_listview_product );
         TextView txt=view.findViewById ( R.id.txt_listview_product );
 
-        ProductListitem productListitem =object.get(position);
+        RecycleProductListItem productListitem =object.get(position);
         txt.setText ( productListitem.title );
         txt.setTextColor ( Color.parseColor ( "#000000" ) );
         txt.setTypeface(null, Typeface.BOLD);
