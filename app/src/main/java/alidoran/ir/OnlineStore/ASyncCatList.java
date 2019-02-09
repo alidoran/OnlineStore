@@ -1,6 +1,7 @@
 package alidoran.ir.OnlineStore;
 
 import android.os.AsyncTask;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -8,19 +9,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class ASyncComment extends AsyncTask {
+public class ASyncCatList extends AsyncTask {
 
     public String link = "";
     public String id="";
 
 
-    public ASyncComment ( String link , String id  ) {
+    public ASyncCatList ( String link , String id  ) {
         this.link = link;
         this.id = id;
     }
     @Override
     protected Object doInBackground ( Object[] objects ) {
-        CommentActivity.data="";
+        CatListActivity.data="";
         try {
             //user & pass convert to URL
             String data= URLEncoder.encode("id","utf8")+"="+URLEncoder.encode ( id , "utf8"  );
@@ -44,10 +45,13 @@ public class ASyncComment extends AsyncTask {
             while ((line = reader.readLine ( )) != null) {
                 builder.append ( line );
             }
-            CommentActivity.data = builder.toString ( );
+            CatListActivity.data = builder.toString ( );
+
 
         } catch (Exception error) {
         }
         return "";
     }
 }
+
+

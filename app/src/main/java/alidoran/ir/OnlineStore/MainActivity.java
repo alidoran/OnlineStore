@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -136,11 +135,11 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     private void product_navigation ( ) {
         ListView listView_product = findViewById ( R.id.listview_product );
-        ArrayList <RecycleProductListItem> items = new ArrayList <> ( );
-        items.add ( new RecycleProductListItem ( R.mipmap.offer , "پر تخفیف ترین ها" ) );
-        items.add ( new RecycleProductListItem ( R.mipmap.bestsell , "پر فروش ترین ها" ) );
-        items.add ( new RecycleProductListItem ( R.mipmap.bestvisit , "پر بازدید ترین ها" ) );
-        items.add ( new RecycleProductListItem ( R.mipmap.pnew , "جدیدترین ها" ) );
+        ArrayList <ProductListItem> items = new ArrayList <> ( );
+        items.add ( new ProductListItem ( R.mipmap.offer , "پر تخفیف ترین ها" ) );
+        items.add ( new ProductListItem ( R.mipmap.bestsell , "پر فروش ترین ها" ) );
+        items.add ( new ProductListItem ( R.mipmap.bestvisit , "پر بازدید ترین ها" ) );
+        items.add ( new ProductListItem ( R.mipmap.pnew , "جدیدترین ها" ) );
         listView_product.setAdapter ( new ProductAdapter ( MainActivity.this , R.layout.listview_product , items ) );
     }
 

@@ -8,21 +8,19 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class WaitActivity extends AppCompatActivity {
+public class WaitCatListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_wait );
 
-        ShowActivity.data="";
-        ShowActivity.details="";
+
         Bundle bundle = getIntent ( ).getExtras ( );
-        final String id = bundle.getString ( "id" );
+        String id = bundle.getString ( "id" );
+        Toast.makeText ( MainActivity.context , id + "" , Toast.LENGTH_LONG ).show ( );
 
-        new ASyncProductPictures ( "http://www.alidoran.ir/ProductPictures.php" , id  ).execute (  );
-        new ASyncProductDetails ( "http://www.alidoran.ir/ProductDetails.php",id ).execute (  );
-
+        new ASyncCatList ( "http://www.alidoran.ir/cat_list.php" , id ).execute ( );
 
         final Timer timer = new Timer ( );
         timer.scheduleAtFixedRate ( new TimerTask ( ) {
@@ -31,9 +29,8 @@ public class WaitActivity extends AppCompatActivity {
                 runOnUiThread ( new Runnable ( ) {
                     @Override
                     public void run ( ) {
-                        if ((!ShowActivity.data.equals ( "" ))&&(!MainActivity.timer.equals ( "" ))&&(!ShowActivity.details.equals ( "" )) ) {
-                            Intent intent = new Intent ( WaitActivity.this , ShowActivity.class );
-                            intent.putExtra ( "id" , id);
+                        if (!CatListActivity.data.equals ( "" )) {
+                            Intent intent = new Intent ( WaitCatListActivity.this , CatListActivity.class );
                             startActivity ( intent );
                             timer.cancel ( );
                             finish ( );
@@ -42,7 +39,8 @@ public class WaitActivity extends AppCompatActivity {
                 } );
 
             }
-        } , 1 , 1000 );
+        } , 1 , 500 );
     }
 }
+
 
