@@ -2,19 +2,21 @@ package alidoran.ir.OnlineStore;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class ProductListRecycleAdapter extends RecyclerView.Adapter<viewHolder> {
+public class RecycleAdapterListProduct extends RecyclerView.Adapter<viewHolder> {
 
     ArrayList<RecycleProduct> recycleProducts = new ArrayList <> (  );
-    public ProductListRecycleAdapter(ArrayList<RecycleProduct> recycleProducts){
+    public RecycleAdapterListProduct ( ArrayList<RecycleProduct> recycleProducts){
         this.recycleProducts=recycleProducts;
     }
 
@@ -27,8 +29,12 @@ public class ProductListRecycleAdapter extends RecyclerView.Adapter<viewHolder> 
     }
 
     @Override
-    public void onBindViewHolder ( @NonNull viewHolder viewHolder , int i ) {
+    public void onBindViewHolder ( @NonNull viewHolder viewholder , int i ) {
         RecycleProduct recycleProduct = recycleProducts.get ( i );
+        viewholder.recycle_txt.setText ( recycleProduct.recycle_name );
+        Toast.makeText ( MainActivity.context,"http://www.alidoran.ir/picture/type/" + recycleProduct.recycle_img,Toast.LENGTH_SHORT ).show ();
+        Picasso.with ( MainActivity.context ).load ( "http://www.alidoran.ir/picture/type/" + recycleProduct.recycle_img ).fit ().into ( viewholder.recycle_img );
+
 
 
     }
@@ -45,7 +51,7 @@ class viewHolder extends RecyclerView.ViewHolder{
 
     public viewHolder ( @NonNull View itemView ) {
         super ( itemView );
-        recycle_img = itemView.findViewById ( R.id.list_product_img_recycle );
-        recycle_img = itemView.findViewById ( R.id.list_product_txt_recycle );
+        recycle_img = itemView.findViewById ( R.id.recycle_list_product_img );
+        recycle_txt = itemView.findViewById ( R.id.recycle_list_product_txt );
     }
 }

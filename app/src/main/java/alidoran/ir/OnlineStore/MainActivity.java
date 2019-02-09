@@ -543,7 +543,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             @Override
             public void onClick ( View v ) {
 
-                ListProductActivityRecycle.data="";
+                RecycleActivityListProduct.data="";
                 new ASyncRecycle ( "http://www.alidoran.ir/list_product_recycle.php" ).execute (  );
 
                 final Timer timer = new Timer ( );
@@ -553,8 +553,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                         runOnUiThread ( new Runnable ( ) {
                             @Override
                             public void run ( ) {
-                                if (!ListProductActivityRecycle.data.equals ( "" )) {
-                                    Intent intent = new Intent ( MainActivity.this , ListProductActivityRecycle.class );
+                                if (!RecycleActivityListProduct.data.equals ( "" )) {
+                                    Intent intent = new Intent ( MainActivity.this , RecycleActivityListProduct.class );
                                     startActivity ( intent );
                                     timer.cancel ( );
                                     //finish ( );

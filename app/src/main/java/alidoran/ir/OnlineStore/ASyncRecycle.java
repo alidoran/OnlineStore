@@ -37,7 +37,7 @@ public class ASyncRecycle extends AsyncTask {
             while ((line = reader.readLine ( )) != null) {
                 builder.append ( line );
             }
-            ListProductActivityRecycle.data = builder.toString ( );
+            RecycleActivityListProduct.data = builder.toString ( );
 
         } catch (Exception error) {
         }
