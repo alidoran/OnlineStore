@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="#ffb682">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:orientation="horizontal"
@@ -23,7 +23,7 @@
             android:textSize="18dp"
             android:layout_marginRight="18dp"/>
 
-    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_product_list"
