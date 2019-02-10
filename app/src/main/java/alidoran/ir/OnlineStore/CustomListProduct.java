@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class CustomListProduct extends LinearLayout {
+    public static String id_custom;
     public static TextView txt_cutom_name;
     public static TextView txt_custom_desc;
     public static TextView txt_custom_price;
