@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -27,7 +26,7 @@ public class RecycleAdapterListProduct extends RecyclerView.Adapter <viewHolder>
     @NonNull
     @Override
     public viewHolder onCreateViewHolder ( @NonNull ViewGroup viewGroup , int i ) {
-        View view = LayoutInflater.from ( viewGroup.getContext ( ) ).inflate ( R.layout.recycle_product_list , viewGroup , false );
+        View view = LayoutInflater.from ( viewGroup.getContext ( ) ).inflate ( R.layout.recycle_product_type , viewGroup , false );
         return new viewHolder ( view );
     }
 
