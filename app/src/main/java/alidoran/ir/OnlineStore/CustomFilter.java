@@ -12,7 +12,7 @@ public class CustomFilter extends LinearLayout {
 
     public static TextView txt_filter_title;
     public boolean active_filter = false;
-    LinearLayout lin_filter;
+//    LinearLayout lin_filter;
 
 
 
@@ -31,10 +31,10 @@ public class CustomFilter extends LinearLayout {
 
     private void init ( Context context ) {
         LayoutInflater inflater = (LayoutInflater ) context.getSystemService ( context.LAYOUT_INFLATER_SERVICE );
-        View view = inflater.inflate ( R.layout.activity_filter , this ,true );
+        View view = inflater.inflate ( R.layout.filter , this ,true );
 
-        txt_filter_title = view.findViewById ( R.id.lin_filter_title );
-        lin_filter = view.findViewById ( R.id.lin_filter );
+        txt_filter_title = view.findViewById ( R.id.txt_filter_title );
+//        lin_filter = view.findViewById ( R.id.lin_filter );
 
 
 

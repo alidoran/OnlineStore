@@ -8,7 +8,7 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class WaitCatListActivity extends AppCompatActivity {
+public class WaitFilterActivity extends AppCompatActivity {
 
     String id;
     @Override
@@ -21,7 +21,7 @@ public class WaitCatListActivity extends AppCompatActivity {
         id = bundle.getString ( "id" );
 
 
-        new ASyncCatList ( "http://www.alidoran.ir/cat_list.php" , id ).execute ( );
+        new ASyncFilter ( "http://www.alidoran.ir/filter.php" , id ).execute ( );
 
         final Timer timer = new Timer ( );
         timer.scheduleAtFixedRate ( new TimerTask ( ) {
@@ -30,12 +30,11 @@ public class WaitCatListActivity extends AppCompatActivity {
                 runOnUiThread ( new Runnable ( ) {
                     @Override
                     public void run ( ) {
-                        if (!CatListActivity.data.equals ( "" )) {
-                            Intent intent = new Intent ( WaitCatListActivity.this , CatListActivity.class );
-                            intent.putExtra ( "id" , id );
+                        if (!FilterActivity.data.equals ( "" )) {
+                            Intent intent = new Intent ( WaitFilterActivity.this , FilterActivity.class );
                             startActivity ( intent );
                             timer.cancel ( );
-                            finish ( );
+                            finish ();
                         }
                     }
                 } );
@@ -44,5 +43,3 @@ public class WaitCatListActivity extends AppCompatActivity {
         } , 1 , 500 );
     }
 }
-
-

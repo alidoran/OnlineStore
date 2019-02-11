@@ -199,6 +199,7 @@ public class ShowActivity extends AppCompatActivity implements BaseSliderView.On
                     rateStar.titleProgress.setText ( titleRate );
                     rateStar.progressBar.setProgress ( Integer.valueOf ( rate ) );
                     layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
+                    rateLinearLayout.setLayoutParams ( layoutParams );
                     rateLinearLayout.addView ( rateStar );
                 }
 

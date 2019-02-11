@@ -40,7 +40,8 @@
         <activity android:name=".RecycleListProductActivity" />
         <activity android:name=".WaitCatListActivity" />
         <activity android:name=".CatListActivity" />
-        <activity android:name=".FilterActivity"></activity>
+        <activity android:name=".FilterActivity" />
+        <activity android:name=".WaitFilterActivity"></activity>
     </application>
 
 </manifest>

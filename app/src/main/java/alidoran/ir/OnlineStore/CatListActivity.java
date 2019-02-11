@@ -26,22 +26,22 @@ public class CatListActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent ().getExtras ();
         String id = bundle.getString ( "id" );
-        Toast.makeText ( MainActivity.context , ""+id , Toast.LENGTH_SHORT ).show ( );
 
         fill_custom_list ();
-        sort ();
+        sort (id);
 
 
         LinearLayout lin_cat_sort = findViewById ( R.id.lin_cat_sort );
 
     }
 
-    private void sort(){
+    private void sort ( final String id ){
         LinearLayout lin_cat_filter = findViewById ( R.id.lin_cat_filter );
         lin_cat_filter.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View v ) {
-                Intent intent = new Intent ( MainActivity.context , FilterActivity.class );
+                Intent intent = new Intent ( MainActivity.context , WaitFilterActivity.class );
+                intent.putExtra ( "id" , id );
                 startActivity ( intent );
             }
         } );
