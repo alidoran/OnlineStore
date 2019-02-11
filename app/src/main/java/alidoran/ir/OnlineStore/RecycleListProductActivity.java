@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,7 +54,7 @@ public class RecycleListProductActivity extends AppCompatActivity {
                 recycleProducts.add ( recycleProduct );
 
             }
-            recyclerView.setAdapter ( new RecycleAdapterListProduct ( recycleProducts ) );
+            recyclerView.setAdapter ( new AdapterRecycleListProduct ( recycleProducts ) );
 
         } catch (JSONException e) {
             e.printStackTrace ( );

@@ -24,6 +24,10 @@ public class CatListActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_cat_list );
 
+        Bundle bundle = getIntent ().getExtras ();
+        String id = bundle.getString ( "id" );
+        Toast.makeText ( MainActivity.context , ""+id , Toast.LENGTH_SHORT ).show ( );
+
         fill_custom_list ();
         sort ();
 

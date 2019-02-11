@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         items.add ( new BuyMenuListitem ( R.mipmap.home , "خانه" ) );
         items.add ( new BuyMenuListitem ( R.mipmap.menu , "لیست محصولات" ) );
         items.add ( new BuyMenuListitem ( R.mipmap.shopping , "سبد خرید" ) );
-        listView_navigation.setAdapter ( new BuyMenuAdapter ( MainActivity.this , R.layout.listview_buy_menu , items ) );
+        listView_navigation.setAdapter ( new AdapterBuyMenu ( MainActivity.this , R.layout.listview_buy_menu , items ) );
     }
 
     private void product_navigation ( ) {
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         items.add ( new ProductListItem ( R.mipmap.bestsell , "پر فروش ترین ها" ) );
         items.add ( new ProductListItem ( R.mipmap.bestvisit , "پر بازدید ترین ها" ) );
         items.add ( new ProductListItem ( R.mipmap.pnew , "جدیدترین ها" ) );
-        listView_product.setAdapter ( new ProductAdapter ( MainActivity.this , R.layout.listview_product , items ) );
+        listView_product.setAdapter ( new AdapterProduct ( MainActivity.this , R.layout.listview_product , items ) );
     }
 
     private void setting_navigation ( ) {
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         items.add ( new SettingListitem ( R.mipmap.setting , "تنظیمات" ) );
         items.add ( new SettingListitem ( R.mipmap.question , "سوالات متداول" ) );
         items.add ( new SettingListitem ( R.mipmap.aboutus , "درباره ما" ) );
-        listView_navigation.setAdapter ( new SettingAdapter ( MainActivity.this , R.layout.listview_setting , items ) );
+        listView_navigation.setAdapter ( new AdapterSetting ( MainActivity.this , R.layout.listview_setting , items ) );
     }
 
     private void menu_main_page ( ) {

@@ -14,11 +14,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class RecycleAdapterListProduct extends RecyclerView.Adapter <viewHolder> {
+public class AdapterRecycleListProduct extends RecyclerView.Adapter <viewHolder> {
 
     ArrayList <RecycleProduct> recycleProducts = new ArrayList <> ( );
 
-    public RecycleAdapterListProduct ( ArrayList <RecycleProduct> recycleProducts ) {
+    public AdapterRecycleListProduct ( ArrayList <RecycleProduct> recycleProducts ) {
         this.recycleProducts = recycleProducts;
     }
 
@@ -40,6 +40,7 @@ public class RecycleAdapterListProduct extends RecyclerView.Adapter <viewHolder>
     public int getItemCount ( ) {
         return recycleProducts.size ( );
     }
+
 }
 class viewHolder extends RecyclerView.ViewHolder {
     public ImageView recycle_img;

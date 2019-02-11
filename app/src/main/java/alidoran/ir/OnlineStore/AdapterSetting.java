@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SettingAdapter extends ArrayAdapter {
+public class AdapterSetting extends ArrayAdapter {
     public int recuorceid;
     public Activity context;
     public ArrayList<SettingListitem> object;
 
 
-    public SettingAdapter ( @NonNull Activity context , int resource , ArrayList objects ) {
+    public AdapterSetting ( @NonNull Activity context , int resource , ArrayList objects ) {
         super ( context , resource , objects );
 
         this.recuorceid=resource;

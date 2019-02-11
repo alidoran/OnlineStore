@@ -10,6 +10,7 @@ import java.util.TimerTask;
 
 public class WaitCatListActivity extends AppCompatActivity {
 
+    String id;
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -17,8 +18,8 @@ public class WaitCatListActivity extends AppCompatActivity {
 
 
         Bundle bundle = getIntent ( ).getExtras ( );
-        String id = bundle.getString ( "id" );
-        Toast.makeText ( MainActivity.context , id + "" , Toast.LENGTH_LONG ).show ( );
+        id = bundle.getString ( "id" );
+        //Toast.makeText ( MainActivity.context , id + "" , Toast.LENGTH_LONG ).show ( );
 
         new ASyncCatList ( "http://www.alidoran.ir/cat_list.php" , id ).execute ( );
 
@@ -31,6 +32,7 @@ public class WaitCatListActivity extends AppCompatActivity {
                     public void run ( ) {
                         if (!CatListActivity.data.equals ( "" )) {
                             Intent intent = new Intent ( WaitCatListActivity.this , CatListActivity.class );
+                            intent.putExtra ( "id" , id );
                             startActivity ( intent );
                             timer.cancel ( );
                             finish ( );
