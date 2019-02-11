@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -19,7 +18,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -197,7 +195,7 @@ public class ShowActivity extends AppCompatActivity implements BaseSliderView.On
                 for (int j = 0; j < rateTitle.length ( ); j++) {
                     String titleRate = String.valueOf ( rateTitle.get ( j ) );
                     String rate = String.valueOf ( ratebar.get ( j ) );
-                    RateStar rateStar = new RateStar ( MainActivity.context );
+                    CustomRateStar rateStar = new CustomRateStar ( MainActivity.context );
                     rateStar.titleProgress.setText ( titleRate );
                     rateStar.progressBar.setProgress ( Integer.valueOf ( rate ) );
                     layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );

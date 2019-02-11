@@ -6,17 +6,17 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
-public class ProductOnlyMyStore extends LinearLayout {
+public class CustomProductOnlyMyStore extends LinearLayout {
 
-    public ProductOnlyMyStore ( Context context ) {
+    public CustomProductOnlyMyStore ( Context context ) {
         super ( context );
         init ( context );
     }
-    public ProductOnlyMyStore ( Context context , @Nullable AttributeSet attrs ) {
+    public CustomProductOnlyMyStore ( Context context , @Nullable AttributeSet attrs ) {
         super ( context , attrs );
         init ( context );
     }
-    public ProductOnlyMyStore ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
+    public CustomProductOnlyMyStore ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init ( context );
     }

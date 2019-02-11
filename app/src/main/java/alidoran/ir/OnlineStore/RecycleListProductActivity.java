@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class RecycleActivityListProduct extends AppCompatActivity {
+public class RecycleListProductActivity extends AppCompatActivity {
 
     public static String data="";
     ArrayList<RecycleProduct> recycleProducts;

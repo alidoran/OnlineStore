@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Product extends LinearLayout {
+public class CustomProduct extends LinearLayout {
 
 
     public String id;
@@ -23,15 +23,15 @@ public class Product extends LinearLayout {
 
 
 
-    public Product ( Context context ) {
+    public CustomProduct ( Context context ) {
         super ( context );
         init ( context );
     }
-    public Product ( Context context , @Nullable AttributeSet attrs ) {
+    public CustomProduct ( Context context , @Nullable AttributeSet attrs ) {
         super ( context , attrs );
         init ( context );
     }
-    public Product ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
+    public CustomProduct ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init ( context );
     }

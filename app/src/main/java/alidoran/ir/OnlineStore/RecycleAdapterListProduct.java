@@ -22,7 +22,6 @@ public class RecycleAdapterListProduct extends RecyclerView.Adapter <viewHolder>
         this.recycleProducts = recycleProducts;
     }
 
-
     @NonNull
     @Override
     public viewHolder onCreateViewHolder ( @NonNull ViewGroup viewGroup , int i ) {

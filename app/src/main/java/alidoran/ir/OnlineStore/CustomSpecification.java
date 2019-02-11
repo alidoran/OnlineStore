@@ -7,23 +7,23 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class Specification extends LinearLayout {
+public class CustomSpecification extends LinearLayout {
     public static TextView txt_spec_title;
     public static TextView txt_spec_value;
 
 
 
-    public Specification ( Context context ) {
+    public CustomSpecification ( Context context ) {
         super ( context );
         init ( context );
     }
 
-    public Specification ( Context context , AttributeSet attrs ) {
+    public CustomSpecification ( Context context , AttributeSet attrs ) {
         super ( context , attrs );
         init ( context );
     }
 
-    public Specification ( Context context , AttributeSet attrs , int defStyleAttr ) {
+    public CustomSpecification ( Context context , AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init ( context );
     }

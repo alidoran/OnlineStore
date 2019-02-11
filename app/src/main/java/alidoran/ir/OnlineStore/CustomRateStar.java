@@ -11,19 +11,19 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class RateStar extends LinearLayout {
+public class CustomRateStar extends LinearLayout {
     TextView titleProgress;
     ProgressBar progressBar;
 
-    public RateStar ( Context context ,AttributeSet attrs , int defStyleAttr ) {
+    public CustomRateStar ( Context context , AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init(context);
     }
-    public RateStar ( Context context , AttributeSet attrs ) {
+    public CustomRateStar ( Context context , AttributeSet attrs ) {
         super ( context , attrs );
         init(context);
     }
-    public RateStar ( Context context ) {
+    public CustomRateStar ( Context context ) {
         super ( context );
         init(context);
     }

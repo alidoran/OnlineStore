@@ -8,20 +8,20 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class banner extends LinearLayout {
+public class CustomBanner extends LinearLayout {
 
 
     public static ImageView pic;
 
-    public banner ( Context context ) {
+    public CustomBanner ( Context context ) {
         super ( context );
         init ( context );
     }
-    public banner ( Context context , @Nullable AttributeSet attrs ) {
+    public CustomBanner ( Context context , @Nullable AttributeSet attrs ) {
         super ( context , attrs );
         init ( context );
     }
-    public banner ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
+    public CustomBanner ( Context context , @Nullable AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init ( context );
     }

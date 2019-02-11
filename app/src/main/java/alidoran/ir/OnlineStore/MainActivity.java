@@ -315,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
         LinearLayout lin_product_promotion;
         lin_product_promotion = findViewById ( R.id.lin_product_promotion );
-        Product product = new Product ( this );
+        CustomProduct product = new CustomProduct ( this );
 
         LinearLayout.LayoutParams layoutParams;
         layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -356,7 +356,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
         LinearLayout lin_product_promotion;
         lin_product_promotion = findViewById ( R.id.lin_product_news );
-        Product product = new Product ( this );
+        CustomProduct product = new CustomProduct ( this );
 
         LinearLayout.LayoutParams layoutParams;
         layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -404,7 +404,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
         LinearLayout lin_best_sell;
         lin_best_sell = findViewById ( R.id.lin_best_sell );
-        Product product = new Product ( this );
+        CustomProduct product = new CustomProduct ( this );
 
         LinearLayout.LayoutParams layoutParams;
         layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -449,7 +449,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
         LinearLayout lin_best_sell;
         lin_best_sell = findViewById ( R.id.lin_this_store );
-        Product product = new Product ( this );
+        CustomProduct product = new CustomProduct ( this );
 
         LinearLayout.LayoutParams layoutParams;
         layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -500,7 +500,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         ImageView lin_mainbanner6 = findViewById ( R.id.lin_mainbanner6 );
 
 
-        banner banner = new banner ( this );
+        CustomBanner banner = new CustomBanner ( this );
 
         LinearLayout.LayoutParams layoutParams;
         layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
@@ -543,7 +543,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             @Override
             public void onClick ( View v ) {
 
-                RecycleActivityListProduct.data="";
+                RecycleListProductActivity.data="";
                 new ASyncRecycle ( "http://www.alidoran.ir/list_product_recycle.php" ).execute (  );
 
                 final Timer timer = new Timer ( );
@@ -553,8 +553,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                         runOnUiThread ( new Runnable ( ) {
                             @Override
                             public void run ( ) {
-                                if (!RecycleActivityListProduct.data.equals ( "" )) {
-                                    Intent intent = new Intent ( MainActivity.this , RecycleActivityListProduct.class );
+                                if (!RecycleListProductActivity.data.equals ( "" )) {
+                                    Intent intent = new Intent ( MainActivity.this , RecycleListProductActivity.class );
                                     startActivity ( intent );
                                     timer.cancel ( );
                                     //finish ( );

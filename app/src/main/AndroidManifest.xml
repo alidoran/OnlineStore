@@ -32,12 +32,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".WaitActivity" />
-        <activity android:name=".RateStar" />
+        <activity android:name=".CustomRateStar" />
         <activity android:name=".SpecActivity" />
-        <activity android:name=".Specification" />
+        <activity android:name=".CustomSpecification" />
         <activity android:name=".ActivityComment" />
         <activity android:name=".CommentActivity" />
-        <activity android:name=".RecycleActivityListProduct" />
+        <activity android:name=".RecycleListProductActivity" />
         <activity android:name=".WaitCatListActivity" />
         <activity android:name=".CatListActivity" />
         <activity android:name=".FilterActivity"></activity>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Specification"
+    tools:context=".CustomSpecification"
     android:background="#ffb682"
     android:orientation="vertical">
 

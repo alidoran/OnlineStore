@@ -35,7 +35,7 @@ public class SpecActivity extends AppCompatActivity {
             for (int j = 0; j < spec_title.length ( ); j++) {
                 title = spec_title.getString ( j );
                 value = spec_value.getString ( j );
-                Specification specification = new Specification ( MainActivity.context );
+                CustomSpecification specification = new CustomSpecification ( MainActivity.context );
                 specification.txt_spec_title.setText ( title );
                 specification.txt_spec_value.setText ( value );
                 layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );

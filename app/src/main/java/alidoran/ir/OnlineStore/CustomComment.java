@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Comment extends LinearLayout {
+public class CustomComment extends LinearLayout {
     public TextView txt_comment_user_name;
     public TextView txt_comment_like_count;
     public TextView txt_comment_dislike_count;
@@ -28,15 +28,15 @@ public class Comment extends LinearLayout {
 
 
 
-    public Comment ( Context context ) {
+    public CustomComment ( Context context ) {
         super ( context );
         init (context);
     }
-    public Comment ( Context context , AttributeSet attrs ) {
+    public CustomComment ( Context context , AttributeSet attrs ) {
         super ( context , attrs );
         init (context);
     }
-    public Comment ( Context context , AttributeSet attrs , int defStyleAttr ) {
+    public CustomComment ( Context context , AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init (context);
     }

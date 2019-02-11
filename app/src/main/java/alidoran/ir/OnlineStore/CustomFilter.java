@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class Filter extends LinearLayout {
+public class CustomFilter extends LinearLayout {
 
     public static TextView txt_filter_title;
     public boolean active_filter = false;
@@ -16,15 +16,15 @@ public class Filter extends LinearLayout {
 
 
 
-    public Filter ( Context context , AttributeSet attrs , int defStyleAttr ) {
+    public CustomFilter ( Context context , AttributeSet attrs , int defStyleAttr ) {
         super ( context , attrs , defStyleAttr );
         init(context);
     }
-    public Filter ( Context context , AttributeSet attrs ) {
+    public CustomFilter ( Context context , AttributeSet attrs ) {
         super ( context , attrs );
         init(context);
     }
-    public Filter ( Context context ) {
+    public CustomFilter ( Context context ) {
         super ( context );
         init(context);
     }

@@ -1,16 +1,12 @@
 package alidoran.ir.OnlineStore;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class CommentActivity extends AppCompatActivity {
 
@@ -69,7 +65,7 @@ public class CommentActivity extends AppCompatActivity {
 
 
                 //create custom comment
-                Comment comment = new Comment ( MainActivity.context );
+                CustomComment comment = new CustomComment ( MainActivity.context );
                 comment.txt_comment_title.setText ( titles );
                 comment.txt_comment.setText ( comments );
                 comment.txt_comment_like_count.setText ( likes );
@@ -83,7 +79,7 @@ public class CommentActivity extends AppCompatActivity {
                 for (int k=0;k<rate_array.length ();k++){
                     rate = rate_array.getString ( k );
                     rate_title = comment_rate_title.getString ( k );
-                    RateStar rateStar = new RateStar ( MainActivity.context );
+                    CustomRateStar rateStar = new CustomRateStar ( MainActivity.context );
                     rateStar.progressBar.setProgress ( Integer.valueOf ( rate ) );
                     rateStar.titleProgress.setText ( rate_title );
                     comment.lin_comment_rate.addView ( rateStar );
