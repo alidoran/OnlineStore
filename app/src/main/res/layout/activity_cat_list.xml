@@ -29,40 +29,58 @@
         android:layout_margin="8dp">
 
         <LinearLayout
-            android:id="@+id/lin_cat_filter"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             >
-            <TextView
+            <LinearLayout
+                android:id="@+id/lin_cat_filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="فیلتر"
-                android:layout_margin="8dp"/>
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@mipmap/filter_high"
-                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="فیلتر"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/filter_high"
+                    />
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lin_cat_sort"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/lin_cat_sort"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="مرتب سازی"
-                android:layout_margin="8dp"/>
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@mipmap/sort_high"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مرتب سازی"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/sort_high"/>
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 

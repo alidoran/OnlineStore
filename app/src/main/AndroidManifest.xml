@@ -39,7 +39,8 @@
         <activity android:name=".CommentActivity" />
         <activity android:name=".RecycleActivityListProduct" />
         <activity android:name=".WaitCatListActivity" />
-        <activity android:name=".CatListActivity"></activity>
+        <activity android:name=".CatListActivity" />
+        <activity android:name=".FilterActivity"></activity>
     </application>
 
 </manifest>
