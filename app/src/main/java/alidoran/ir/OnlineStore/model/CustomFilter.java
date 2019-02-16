@@ -44,7 +44,7 @@ public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder>
         viewHolder.lin_recycle.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View v ) {
-                Toast.makeText ( mycontext, viewHolder.getAdapterPosition() ,Toast.LENGTH_SHORT).show ();
+                Toast.makeText ( mycontext, viewHolder.filter_txtview.getText() ,Toast.LENGTH_SHORT).show ();
             }
         } );
     }
@@ -61,12 +61,15 @@ public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder>
 
         LinearLayout lin_recycle;
 
+
         ViewHolder ( @NonNull View itemView ) {
             super ( itemView );
             filter_txtview = itemView.findViewById ( R.id.txt_filter_title );
             filter_recycle = itemView.findViewById ( R.id.recycler_filter_title );
 
             lin_recycle = itemView.findViewById ( R.id.lin_filter );
+
+
         }
     }
 }
