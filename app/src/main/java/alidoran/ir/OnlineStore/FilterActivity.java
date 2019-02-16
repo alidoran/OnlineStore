@@ -20,10 +20,6 @@ public class FilterActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
 
-
-    //LinearLayout lin_filter_title;
-    //LinearLayout.LayoutParams layoutParams;
-
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -53,15 +49,6 @@ public class FilterActivity extends AppCompatActivity {
                 filterListItem.setFilter_item ( title );
                 adapter.notifyDataSetChanged ();
 
-
-
-
-//                CustomFilter customFilter = new CustomFilter ( MainActivity.context );
-//                customFilter.txt_filter_title.setText ( title );
-//
-//                layoutParams = new LinearLayout.LayoutParams ( LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT );
-//                lin_filter_title.setLayoutParams ( layoutParams );
-//                lin_filter_title.addView ( customFilter );
             }
 
 

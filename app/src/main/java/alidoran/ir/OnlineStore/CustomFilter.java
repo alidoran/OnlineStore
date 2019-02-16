@@ -9,15 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder> {
 
-    List<FilterListItem> filteritem;
-    Context mycontext;
+    private List<FilterListItem> filteritem;
+    private Context mycontext;
 
-    public CustomFilter(List<FilterListItem> filterlistitem , Context mycontext ){
+    CustomFilter(List<FilterListItem> filterlistitem , Context mycontext ){
         this.filteritem = filterlistitem;
         this.mycontext = mycontext;
     }
@@ -30,9 +31,16 @@ public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder ( @NonNull ViewHolder viewHolder , int i ) {
+    public void onBindViewHolder (@NonNull final ViewHolder viewHolder , int i ) {
         FilterListItem filterListItem = filteritem.get ( i );
         viewHolder.filter_txtview.setText ( filterListItem.getFilter_item () );
+
+        viewHolder.lin_recycle.setOnClickListener ( new View.OnClickListener ( ) {
+            @Override
+            public void onClick ( View v ) {
+                Toast.makeText ( mycontext, viewHolder.getAdapterPosition() ,Toast.LENGTH_SHORT).show ();
+            }
+        } );
     }
 
     @Override
@@ -40,15 +48,19 @@ public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder>
         return filteritem.size ();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView filter_txtview;
         LinearLayout filter_recycle;
 
-        public ViewHolder ( @NonNull View itemView ) {
+        LinearLayout lin_recycle;
+
+        ViewHolder ( @NonNull View itemView ) {
             super ( itemView );
             filter_txtview = itemView.findViewById ( R.id.txt_filter_title );
             filter_recycle = itemView.findViewById ( R.id.recycler_filter_title );
+
+            lin_recycle = itemView.findViewById ( R.id.lin_filter );
         }
     }
 }
