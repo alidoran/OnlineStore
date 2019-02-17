@@ -21,10 +21,11 @@ public class CustomFilter extends LinearLayout {
 
 public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder> {
 
-    private List<FilterListItem> filteritem;
+    private List<FilterList> filteritem;
+    private List<FilterList> filtervalue;
     private Context mycontext;
 
-    CustomFilter(List<FilterListItem> filterlistitem , Context mycontext ){
+    CustomFilter(List<FilterList> filterlistitem , Context mycontext ){
         this.filteritem = filterlistitem;
         this.mycontext = mycontext;
     }
@@ -32,14 +33,14 @@ public class CustomFilter extends RecyclerView.Adapter <CustomFilter.ViewHolder>
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder ( @NonNull ViewGroup viewGroup , int i ) {
-        View view = LayoutInflater.from ( mycontext ).inflate ( R.layout.filter , viewGroup , false );
+        View view = LayoutInflater.from ( mycontext ).inflate ( R.layout.filter_title, viewGroup , false );
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder (@NonNull final ViewHolder viewHolder , int i ) {
-        FilterListItem filterListItem = filteritem.get ( i );
-        viewHolder.filter_txtview.setText ( filterListItem.getFilter_item () );
+        FilterList filterList = filteritem.get ( i );
+        viewHolder.filter_txtview.setText ( filterList.getFilter_item () );
 
         viewHolder.lin_recycle.setOnClickListener ( new View.OnClickListener ( ) {
             @Override

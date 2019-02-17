@@ -36,6 +36,7 @@ public class WaitFilterActivity extends AppCompatActivity {
                     public void run ( ) {
                         if (!FilterActivity.data.equals ( "" )) {
                             Intent intent = new Intent ( WaitFilterActivity.this , FilterActivity.class );
+                            intent.putExtra("cat" , id);
                             startActivity ( intent );
                             timer.cancel ( );
                             finish ();
