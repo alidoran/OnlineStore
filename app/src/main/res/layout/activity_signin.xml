@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fda367"
@@ -16,12 +15,12 @@
             android:id="@+id/etxt_signin_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:drawablePadding="15dp"
-            android:drawableRight="@mipmap/at"
-            android:hint="آدرس ایمیل..."
-            android:layout_marginTop="15dp"/>
+            android:drawableStart="@mipmap/at"
+            android:hint="@string/email_address"
+            android:layout_marginTop="16sp"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -32,11 +31,11 @@
             android:id="@+id/etxt_signin_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:drawablePadding="15dp"
-            android:drawableRight="@mipmap/pass"
-            android:hint="رمز عبور ..."
+            android:drawableStart="@mipmap/pass"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
     </android.support.design.widget.TextInputLayout>
@@ -50,14 +49,14 @@
             android:id="@+id/chkbox_signin_showpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="نمایش رمز عبور"
+            android:text="@string/show_password"
             android:textColor="#000000"/>
     </LinearLayout>
 
@@ -71,7 +70,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="فراموشی رمز عبور ..."
+            android:text="@string/forget_password"
             android:textColor="#000000" />
 
         <TextView
@@ -79,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="ثبت نام در فروشگاه ..."
+            android:text="@string/sign_up"
             android:textColor="#000000" />
     </LinearLayout>
 
@@ -99,9 +98,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingLeft="10dp"
-                android:text="ورود به سایت"
-                android:textColor="#000000"
+                android:paddingStart="10dp"
+                android:text="@string/sign_in"
+                android:textColor="@color/md_black_1000"
                 android:textStyle="bold"
                 />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OnlineStore</string>
+    <string name="app_name">فروشگاه اینترنتی</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="product_group">دسته محصولات</string>
     <string name="filter">فیلتر</string>
@@ -16,8 +16,31 @@
     <string name="user_comment">نظرات کاربران</string>
     <string name="product_detail">مشخصات محصول</string>
     <string name="color">رنگ</string>
-
-
-
+    <string name="total_votes">آرا کل</string>
+    <string name="warranty">آرا کل</string>
+    <string name="color_and_warranty_option">انتخاب رنگ و گارانتی</string>
+    <string name="details">توضیحات</string>
+    <string name="read_more">ادامه مطلب</string>
+    <string name="from"> از </string>
+    <string name="same_product"> محصولات مشابه </string>
+    <string name="toman"> تومان </string>
+    <string name="email_address"> آدرس ایمیل… </string>
+    <string name="password"> رمز عبور </string>
+    <string name="show_password"> نمایش رمز عیور </string>
+    <string name="forget_password"> فراموشی رمز عبور </string>
+    <string name="sign_up"> ثبت نام </string>
+    <string name="sign_in"> ورود </string>
+    <string name="enter_details"> لطفا اطلاعات خود را وارد نمایید </string>
+    <string name="phone_number"> شماره موبایل </string>
+    <string name="password_hint"> پسورد … </string>
+    <string name="reenter_password">رمز عبور را دوباره وارد کنید …</string>
+    <string name="specification">مشخصات فنی</string>
+    <string name="unknown">ناشناس</string>
+    <string name="title">موضوع</string>
+    <string name="strong_point">نقاط قوت :</string>
+    <string name="week_point">نقاط ضعف :</string>
+    <string name="price">قیمت :</string>
+    <string name="signin_signup">ورود/عضویت</string>
+    <string name="exit">خروج</string>
 
 </resources>

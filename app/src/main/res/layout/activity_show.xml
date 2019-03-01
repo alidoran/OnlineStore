@@ -44,7 +44,6 @@
                     android:id="@+id/main.toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    app:contentInsetLeft="0dp"
                     app:contentInsetStart="0dp"
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -212,7 +211,7 @@
                     android:background="@color/backgrandcolor"
                     android:orientation="vertical">
 
-                    //product details
+                    <!--product details-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -310,20 +309,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="رنگ"
+                                    android:text="@string/color"
                                     android:textSize="20sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text=":"
+                                    android:text="@string/colon"
                                     android:textSize="20sp" />
 
                                 <TextView
                                     android:id="@+id/txtProductColor"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="نارنجی"
+                                    tools:text="نارنجی"
                                     android:textSize="20sp" />
                             </LinearLayout>
 
@@ -331,7 +330,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
-                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
                                 android:layout_weight="1"
                                 android:background="@color/backgrandcolor"
                                 android:gravity="center">
@@ -339,20 +338,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="گارانتی"
+                                    android:text="@string/warranty"
                                     android:textSize="20sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text=":"
+                                    android:text="@string/colon"
                                     android:textSize="20sp" />
 
                                 <TextView
                                     android:id="@+id/txtProductGuarantee"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="متین"
+                                    tools:text="متین"
                                     android:textSize="20sp" />
                             </LinearLayout>
                         </LinearLayout>
@@ -360,9 +359,9 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
-                            android:layout_marginRight="16dp"
+                            android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
                             android:background="@color/md_black_1000">
 
@@ -375,8 +374,8 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="انتخاب رنگ و گارانتی"
-                                android:textSize="20dp"
+                                android:text="@string/color_and_warranty_option"
+                                android:textSize="20sp"
                                 android:textStyle="italic|bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -393,8 +392,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:layout_margin="8dp"
-                            android:text="توضیحات"
-                            android:textSize="15dp" />
+                            android:text="@string/details"
+                            android:textSize="16sp" />
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -407,11 +406,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="ادامه مطلب"
-                            android:textSize="20dp" />
+                            android:text="@string/read_more"
+                            android:textSize="16dp" />
                     </LinearLayout>
 
-                    //START RATE
+                    <!--START RATE-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -434,9 +433,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
-                                    android:gravity="right"
-                                    android:text="مجموع آرا"
-                                    android:textSize="16dp" />
+                                    android:gravity="start"
+                                    android:text="@string/total_votes"
+                                    android:textSize="16sp" />
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -448,17 +447,17 @@
                                         android:id="@+id/txt_star_num"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text=" 5 " />
+                                        tools:text=" 5 " />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text=" از " />
+                                    android:text="@string/from" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text=" 5 " />
+                                        tools:text=" 5 " />
 
                                 </LinearLayout>
 
@@ -469,14 +468,14 @@
                                     android:backgroundTint="@color/md_white_1000"
                                     android:progressTint="@color/colorPrimary"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginStart="20dp"
                                     android:numStars="5"
                                     android:stepSize="0.1"/>
 
                             </LinearLayout>
                         </LinearLayout>
 
-                        //PROGRESSBAR FROM RATE
+                        <!--PROGRESSBAR FROM RATE-->
 
                         <LinearLayout
                             android:id="@+id/rateLinearLayout"
@@ -488,7 +487,7 @@
 
 
                     </LinearLayout>
-                    //SIMILAR PRODUCTS
+                    <!--SIMILAR PRODUCTS-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -504,9 +503,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
-                            android:text="محصولات مشابه"
-                            android:textSize="25dp" />
+                            android:layout_marginStart="8dp"
+                            android:text="@string/same_product"
+                            android:textSize="32sp" />
 
                         <HorizontalScrollView
                             android:layout_width="match_parent"
@@ -514,7 +513,7 @@
                             android:layoutDirection="rtl">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
@@ -555,21 +554,21 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
-                    android:gravity="right">
+                    android:gravity="end">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:text="تومان"
-                        android:textSize="25dp" />
+                        android:layout_marginStart="8dp"
+                        android:text="@string/toman"
+                        android:textSize="32sp" />
 
                     <TextView
                         android:id="@+id/txtProductPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="000000"
-                        android:textSize="25dp" />
+                        tools:text="000000"
+                        android:textSize="32sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -581,7 +580,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
                         android:src="@mipmap/shopping" />
 
                 </LinearLayout>

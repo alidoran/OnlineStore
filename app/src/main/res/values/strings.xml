@@ -16,7 +16,32 @@
     <string name="user_comment">User Comment</string>
     <string name="product_detail">Product Details</string>
     <string name="color">Color</string>
-    <string name="test">test</string>
+    <string name="total_votes">Total Votes</string>
+    <string name="warranty">Warranty</string>
+    <string name="color_and_warranty_option">Color &amp; Warranty option</string>
+    <string name="details">Details</string>
+    <string name="read_more">Read More</string>
+    <string name="from"> From </string>
+    <string name="same_product"> Same Product </string>
+    <string name="toman"> Toman </string>
+    <string name="email_address"> Email Address </string>
+    <string name="password"> Password </string>
+    <string name="show_password"> Show Password </string>
+    <string name="forget_password"> Forget Password </string>
+    <string name="sign_up"> sign_up </string>
+    <string name="sign_in"> sign_in </string>
+    <string name="enter_details"> Please enter your details </string>
+    <string name="phone_number"> phone number </string>
+    <string name="password_hint"> password… </string>
+    <string name="reenter_password"> reenter password…</string>
+    <string name="specification">specification</string>
+    <string name="unknown">Uknown</string>
+    <string name="title">Title</string>
+    <string name="strong_point">Strong point</string>
+    <string name="week_point">Week point</string>
+    <string name="price">price : </string>
+    <string name="signin_signup">SignIn/SignOut</string>
+    <string name="exit">Exit</string>
 
 
 

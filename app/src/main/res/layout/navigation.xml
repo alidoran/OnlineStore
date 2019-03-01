@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="right">
+    android:layout_gravity="end">
 
     <android.support.design.widget.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="right">
+        android:layout_gravity="end">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ورود/عضویت"
+                    android:text="@string/signin_signup"
                     android:textColor="#ffffff"
                     android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="خروج"
+                    android:text=""
                     android:textColor="#ffffff" />
 
             </LinearLayout>
@@ -72,10 +72,12 @@
                 android:id="@+id/listview_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:divider="@android:color/transparent"
                 android:layoutDirection="rtl"
-                ></ListView>
+                >
+
+            </ListView>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -86,9 +88,11 @@
                 android:id="@+id/listview_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="End"
                 android:divider="@android:color/transparent"
-                android:layoutDirection="rtl"></ListView>
+                >
+
+            </ListView>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -99,9 +103,10 @@
                 android:id="@+id/listview_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:divider="@android:color/transparent"
-                android:layoutDirection="rtl"></ListView>
+                android:layout_gravity="end"
+                android:divider="@android:color/transparent">
+
+            </ListView>
 
             <LinearLayout
                 android:layout_width="match_parent"
