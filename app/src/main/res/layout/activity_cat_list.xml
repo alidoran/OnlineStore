@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:orientation="vertical"
-    tools:context=".CatListActivity"
-    android:background="#ffb682">
+    tools:context=".view.CatListActivity"
+    android:background="@color/backgrandcolor">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#dc6d2f"
+        android:background="@color/colorPrimarydDark"
         android:gravity="center_vertical"
         android:layoutDirection="rtl"
         android:orientation="horizontal">
@@ -19,14 +19,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="دسته محصولات"
-            android:textSize="20dp" />
+            android:text="@string/product_group"
+            android:textSize="20sp" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="8dp"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -42,14 +43,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="فیلتر"
+                    android:text="@string/filter"
                     android:layout_margin="8dp"/>
 
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@mipmap/filter_high"
-                    />
+                    android:src="@mipmap/filter_high" />
 
             </LinearLayout>
 
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="مرتب سازی"
+                    android:text="@string/sort"
                     android:layout_margin="8dp"/>
 
                 <ImageView

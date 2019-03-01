@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgrandcolor"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_header" />
 
 
     <ScrollView
@@ -19,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -37,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="#ec5c0c"
+                android:background="@color/backgrandcolor"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -49,8 +48,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="مشاهده لیست محصولات"
-                    android:textSize="18dp"
+                    android:text="@string/view_product_list"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -65,7 +64,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="16sp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -74,70 +73,70 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background_time"
-                        android:text="12"
+                        tools:text="12"
                         android:textColor="#fff"
-                        android:textSize="22dp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=":"
-                        android:textSize="22dp" />
+                        android:text="@string/colon"
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/minPromotion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background_time"
-                        android:text="13"
+                        tools:text="13"
                         android:textColor="#fff"
-                        android:textSize="22dp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=":"
-                        android:textSize="22dp" />
+                        android:text="@string/colon"
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/secPromotion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background_time"
-                        android:text="14"
+                        tools:text="14"
                         android:textColor="#fff"
-                        android:textSize="22dp" />
+                        android:textSize="22sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="start"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="5sp"
-                        android:gravity="right"
-                        android:text="ویژه"
+                        android:layout_marginStart="5sp"
+                        android:gravity="start"
+                        android:text="@string/special"
                         android:textColor="#df1e1e"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="italic|bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16sp"
-                        android:gravity="right"
-                        android:text="پیشنهاد"
-                        android:textSize="18dp"
+                        android:layout_marginStart="16sp"
+                        android:gravity="start"
+                        android:text="@string/offer"
+                        android:textSize="18sp"
                         android:textStyle="italic|bold" />
                 </LinearLayout>
             </LinearLayout>
 
-            //specialoffer
+            <!--specialoffer-->
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -156,7 +155,7 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            //only this store title
+            <!--only this store title-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -169,23 +168,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="left"
-                    android:text="لیست کامل"
+                    android:gravity="end"
+                    android:text="@string/full_list"
                     android:textColor="#ec5c0c"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="فقط در این فروشگاه"
+                    android:text="@string/only_this_store"
                     android:textColor="#ec5c0c"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
 
             </LinearLayout>
 
-            //only this store
+            <!--only this store-->
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -234,7 +233,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:layout_marginRight="3dp">
+                    android:layout_marginStart="3dp">
                 </ImageView>
 
 
@@ -245,7 +244,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:layout_marginLeft="3dp">
+                    android:layout_marginEnd="3dp">
 
                 </ImageView>
             </LinearLayout>
@@ -259,7 +258,9 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="#FFFFFF"></ImageView>
+                android:background="#FFFFFF">
+
+            </ImageView>
 
 
             <LinearLayout
@@ -276,8 +277,10 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:layout_marginRight="3dp"></ImageView>
+                    android:background="@color/md_white_1000"
+                    android:layout_marginEnd="3dp">
+
+                </ImageView>
 
                 <ImageView
                     android:id="@+id/lin_mainbanner6"
@@ -285,8 +288,10 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:layout_marginLeft="3dp"></ImageView>
+                    android:background="@color/md_white_1000"
+                    android:layout_marginStart="3dp">
+
+                </ImageView>
             </LinearLayout>
 
             <LinearLayout
@@ -300,10 +305,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="left"
-                    android:text="لیست کامل"
+                    android:gravity="start"
+                    android:text="@string/full_list"
                     android:textColor="#ec5c0c"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -311,7 +316,7 @@
                     android:layout_weight="1"
                     android:text="محصولات پرفروش"
                     android:textColor="#ec5c0c"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
 
             </LinearLayout>

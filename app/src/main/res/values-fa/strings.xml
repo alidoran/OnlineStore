@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">OnlineStore</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="product_group">دسته محصولات</string>
+    <string name="filter">فیلتر</string>
+    <string name="product_filter">فیلتر محصولات</string>
+    <string name="do_filter">اعمال فیلتر</string>
+    <string name="sort">مرتب سازی</string>
+    <string name="product_list">لیست محصولات</string>
+    <string name="view_product_list">نمایش لیست محصولات</string>
+    <string name="colon">:</string>
+    <string name="special">ویژه</string>
+    <string name="offer">پیشنهاد</string>
+    <string name="full_list">لیست کامل</string>
+    <string name="only_this_store">فقط در این فروشگاه</string>
+    <string name="user_comment">نظرات کاربران</string>
+    <string name="product_detail">مشخصات محصول</string>
+    <string name="color">رنگ</string>
+
+
+
+
+</resources>

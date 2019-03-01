@@ -6,7 +6,7 @@
     android:background="#fda367"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar_header"/>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"

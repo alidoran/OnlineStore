@@ -13,17 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:fullBackupContent="true">
         <activity
-            android:name=".SigninActivity"
+            android:name=".view.SigninActivity"
             android:theme="@style/signin" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".view.SignupActivity"
             android:theme="@style/signup" />
-        <activity android:name=".ShowActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".view.ShowActivity" />
+        <activity android:name=".view.MainActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:theme="@style/splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,17 +32,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WaitActivity" />
-        <activity android:name=".CustomRateStar" />
-        <activity android:name=".SpecActivity" />
-        <activity android:name=".CustomSpecification" />
-        <activity android:name=".ActivityComment" />
-        <activity android:name=".CommentActivity" />
-        <activity android:name=".RecycleListProductActivity" />
-        <activity android:name=".WaitCatListActivity" />
-        <activity android:name=".CatListActivity" />
-        <activity android:name=".FilterActivity" />
-        <activity android:name=".WaitFilterActivity"></activity>
+        <activity android:name=".view.WaitActivity" />
+        <activity android:name=".view.SpecActivity" />
+        <activity android:name=".view.CommentActivity" />
+        <activity android:name=".view.RecycleListProductActivity" />
+        <activity android:name=".view.WaitCatListActivity" />
+        <activity android:name=".view.CatListActivity" />
+        <activity android:name=".view.FilterActivity" />
+        <activity android:name=".view.WaitFilterActivity">
+
+        </activity>
     </application>
 
 </manifest>

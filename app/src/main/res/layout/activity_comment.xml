@@ -3,23 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommentActivity"
-    android:background="#ffb682"
+    tools:context=".view.CommentActivity"
+    android:background="@color/backgrandcolor"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#dc6d2f"
-        android:gravity="right|center_vertical"
+        android:background="@color/colorPrimarydDark"
+        android:gravity="start|center_vertical"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="نظرات کاربران"
-            android:textSize="25dp" />
+            android:layout_marginStart="16dp"
+            android:text="@string/user_comment"
+            android:textSize="25sp" />
     </LinearLayout>
 
     <ScrollView
